@@ -16,15 +16,6 @@ Results of CNN based model: https://drive.google.com/file/d/1vkatlwTjsTQpiw7Or_e
 
 Results of transformer based model:
 
-```
-@inproceedings{jing_ebm_sod21,
-  title={Learning Generative Vision Transformer with Energy-Based Latent Space for Saliency Prediction},
-  author={Zhang, Jing and Xie, Jianwen and Barnes, Nick and Li, Ping},
-  booktitle={2021 Conference on Neural Information Processing Systems},
-  year={2021}
-}
-```
-
 
 # Our Bib:
 
