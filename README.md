@@ -14,7 +14,7 @@ For RGB-D image pair based models, we provide results on six testing datasets: N
 
 Results of CNN based model: https://drive.google.com/file/d/1vkatlwTjsTQpiw7Or_eV_Q4YKNI-E_LZ/view?usp=sharing
 
-Results of transformer based model:
+Results of transformer based model: https://drive.google.com/file/d/1UV5HBjtYuJnJIKj58r-laP8gjUCAzPTs/view?usp=sharing
 
 
 # Our Bib:
