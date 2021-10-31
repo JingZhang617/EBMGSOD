@@ -250,13 +250,13 @@ def ssim( pred, gt):
 
 task = "SOD"
 if task == "SOD":
-    gt_dir = "/home1/datasets/SOD_COD/SOD_RGB/"
+    gt_dir = "./SOD/gt/"
     test_datasets = ['DUTS', 'ECSSD', 'DUT', 'HKU-IS', 'PASCAL', 'SOD'] # ['DUTS', 'ECSSD', 'DUT', 'HKU-IS', 'THUR', 'SOC']
 elif task == "COD":
-    gt_dir = "/data/maoyuxin/datasets/COD_datasets/COD_test/"
+    gt_dir = "./COD/gt/"
     test_datasets = ['CAMO', 'CHAMELEON', 'COD10K', 'NC4K']
 elif task == "RGBD-SOD":
-    gt_dir = "/data/maoyuxin/codes/COD/rgbd_sod/dataset/test/"
+    gt_dir = "./RGBD/gt/"
     test_datasets = ['NJU2K', 'DES', 'NLPR', 'LFSD', 'SIP', 'STERE']
 pred_dir = 'experiments/SOD_vitb_rn50_384_2.5e-05_DPTDS_EPOCH50/save_images/50_epoch/'
 print(pred_dir)
