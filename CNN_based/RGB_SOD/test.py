@@ -33,7 +33,7 @@ parser.add_argument('--batchsize', type=int, default=5, help='training batch siz
 
 opt = parser.parse_args()
 
-dataset_path = '/home/jingzhang/jing_files/RGB_Dataset/test/img/'
+dataset_path = './RGB_Dataset/test/img/'
 
 generator = Pred_endecoder(channel=opt.feat_channel, latent_dim=opt.latent_dim)
 generator.load_state_dict(torch.load('./models/Model_50_gen.pth'))
@@ -42,7 +42,7 @@ generator.cuda()
 generator.eval()
 
 discriminator = EBM_Prior(opt.ebm_out_dim, opt.ebm_middle_dim, opt.latent_dim)
-discriminator.load_state_dict(torch.load('./models/Model_30_ebm.pth'))
+discriminator.load_state_dict(torch.load('./models/Model_50_ebm.pth'))
 
 discriminator.cuda()
 discriminator.eval()
