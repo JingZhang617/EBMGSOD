@@ -33,7 +33,7 @@ parser.add_argument('--batchsize', type=int, default=5, help='training batch siz
 
 opt = parser.parse_args()
 
-dataset_path = '/home/jingzhang/jing_files/RGBD_Dataset/test/'
+dataset_path = './RGBD_Dataset/test/'
 
 generator = Pred_endecoder(channel=opt.feat_channel, latent_dim=opt.latent_dim)
 generator.load_state_dict(torch.load('./models/Model_100_gen.pth'))
