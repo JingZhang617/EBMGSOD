@@ -32,3 +32,7 @@ Please cite our paper if necessary:
 # Contact
 
 Please drop me an email for further problems or discussion: zjnwpu@gmail.com
+
+# Aknowledgement
+
+Thanks Yuxin Mao (maoyuxin@mail.nwpu.edu.cn) for setting up the transformer framework for salient object detection.
