@@ -61,9 +61,9 @@ print("Model based on {} have {:.4f}Mb paramerters in total".format('Generator',
 print("EBM Model based on {} have {:.4f}Mb paramerters in total".format('EBM', sum(
         x.numel() / 1e6 for x in ebm_model.parameters())))
 
-image_root = '/home/jingzhang/jing_files/RGBD_Dataset/train/old_train/RGB/'
-gt_root = '/home/jingzhang/jing_files/RGBD_Dataset/train/old_train/GT/'
-depth_root = '/home/jingzhang/jing_files/RGBD_Dataset/train/old_train/depth/'
+image_root = './RGBD_Dataset/train/old_train/RGB/'
+gt_root = './RGBD_Dataset/train/old_train/GT/'
+depth_root = './RGBD_Dataset/train/old_train/depth/'
 
 train_loader = get_loader(image_root, depth_root, gt_root, batchsize=opt.batchsize, trainsize=opt.trainsize)
 total_step = len(train_loader)
