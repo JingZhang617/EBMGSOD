@@ -36,10 +36,11 @@ Please drop me an email for further problems or discussion: zjnwpu@gmail.com
 # Acknowledgment
 
 Thanks Yuxin Mao (maoyuxin@mail.nwpu.edu.cn) for setting up the transformer framework for salient object detection. Please refer to paper below for details:
-
+```
 @article{mao2021transformer,
   title={Transformer transforms salient object detection and camouflaged object detection},
   author={Mao, Yuxin and Zhang, Jing and Wan, Zhexiong and Dai, Yuchao and Li, Aixuan and Lv, Yunqiu and Tian, Xinyu and Fan, Deng-Ping and Barnes, Nick},
   journal={arXiv preprint arXiv:2104.10127},
   year={2021}
 }
+```
