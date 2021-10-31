@@ -32,15 +32,6 @@ def Eval_mae(loader,cuda=True):
             mae_list.append(mae.item())
         avg_mae /= img_num
     return avg_mae, mae_list
-
-# pred_dir ='experiments/SOD_vitb_rn50_384_2.5e-05_ResNet_DUTS_Train_All/save_images/30_epoch/DUTS/'
-# dataset_path = '/home1/datasets/SOD_COD/DUTS/gt'
-# loader = eval_Dataset(pred_dir, dataset_path)
-# mae, mae_list = Eval_mae(loader=loader, cuda=True)
-# # plt.hist(mae_list, edgecolor='k', alpha=0.35)
-# # plt.savefig('plot.png')
-# import pdb; pdb.set_trace()
-# print('end')
 with open('temp_dir/ours_results_DUTS', 'rb') as f:  
     mae_list_ours = pickle.loads(f.read())
 with open('temp_dir/resnet_results_DUTS', 'rb') as f:  
