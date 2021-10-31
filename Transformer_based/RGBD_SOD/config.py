@@ -7,7 +7,7 @@ parser = argparse.ArgumentParser(description='Decide Which Task to Training')
 parser.add_argument('--task', type=str, default='RGBD-SOD', choices=['SOD','RGBD-SOD'])
 parser.add_argument('--model', type=str, default='swin',
                     choices=['swin'])
-parser.add_argument('--training_path', type=str, default='/home/jingzhang/jing_files/RGB_Dataset/train/DUTS/')
+parser.add_argument('--training_path', type=str, default='./RGB_Dataset/train/DUTS/')
 parser.add_argument('--log_info', type=str, default='REMOVE')
 parser.add_argument('--ckpt', type=str, default='SOD')
 args = parser.parse_args()
@@ -58,12 +58,12 @@ param['backbone_name'] = "vitb_rn50_384"   # vitl16_384
 if param['task'] == 'SOD':
     param['image_root'] = args.training_path + '/img/'
     param['gt_root'] = args.training_path + '/gt/'
-    param['test_dataset_root'] = '/home/jingzhang/jing_files/RGB_Dataset/test/img/'
+    param['test_dataset_root'] = './RGB_Dataset/test/img/'
 elif param['task'] == 'RGBD-SOD':
-    param['image_root'] = '/home/jingzhang/jing_files/RGBD_Dataset/train/old_train/RGB/'
-    param['gt_root'] = '/home/jingzhang/jing_files/RGBD_Dataset/train/old_train/GT/'
-    param['depth_root'] = '/home/jingzhang/jing_files/RGBD_Dataset/train/old_train/depth/'
-    param['test_dataset_root'] = '/home/jingzhang/jing_files/RGBD_Dataset/test/'
+    param['image_root'] = './RGBD_Dataset/train/old_train/RGB/'
+    param['gt_root'] = './RGBD_Dataset/train/old_train/GT/'
+    param['depth_root'] = './RGBD_Dataset/train/old_train/depth/'
+    param['test_dataset_root'] = './RGBD_Dataset/test/'
 
 
 # Experiment Dir Config
