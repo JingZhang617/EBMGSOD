@@ -101,7 +101,11 @@ def test_net(args):
             starts = time.time()
 
             for iter in range(args.iter_num):
-                z_e_0 = sample_p_0(n=images.shape[0], sig=args.e_init_sig, latent_dim=args.latent_dim)
+                z_prior0 = sample_p_0(n=images.shape[0], sig=args.e_init_sig, latent_dim=args.latent_dim)
+                z_post0 = sample_p_0(n=images.shape[0], sig=args.e_init_sig, latent_dim=args.latent_dim)
+                z_e_0 = net(images, z_prior0, z_post0, prior_z_flag=True, istraining=False)
+                z_e_0 = torch.unsqueeze(z_e_0, 2)
+                z_e_0 = z_e_0.permute(0, 2, 1)
                 ## sample langevin prior of z
                 z_e_0 = Variable(z_e_0)
                 z = z_e_0.clone().detach()
@@ -115,7 +119,7 @@ def test_net(args):
                     # z_grad_norm = z_grad.view(args.batch_size, -1).norm(dim=1).mean()
 
                 z_e_noise = z.detach()  ## z_
-                outputs_saliency, outputs_contour = net(images, z_e_noise)
+                outputs_saliency, outputs_contour = net(images, z_e_noise, z_post0, images, prior_z_flag=False, istraining = False)
                 mask_1_16, mask_1_8, mask_1_4, mask_1_1 = outputs_saliency
                 res = mask_1_1
                 mean_pred = mean_pred + torch.sigmoid(res)
